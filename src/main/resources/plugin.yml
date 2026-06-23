@@ -4,4 +4,4 @@ main: com.timnorthrop.itemoftheday.ItemOfTheDayPlugin
 description: Players can exchange a different item each day for a reward!
 author: Tim Northrop
 website: https://timnorthrop.com
-api-version: '26.2'
+api-version: '1.21.11'

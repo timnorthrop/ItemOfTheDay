@@ -11,28 +11,28 @@ public class Utils {
         return name.contains("spawn_egg") ||
                 name.contains("command_block") ||
                 name.contains("infested") ||
-                key == ItemTypeKeys.AIR.key() ||
-                key == ItemTypeKeys.BARRIER.key() ||
-                key == ItemTypeKeys.BEDROCK.key() ||
-                key == ItemTypeKeys.BUDDING_AMETHYST.key() ||
-                key == ItemTypeKeys.CHORUS_PLANT.key() ||
-                key == ItemTypeKeys.DEBUG_STICK.key() ||
-                key == ItemTypeKeys.DIRT_PATH.key() ||
-                key == ItemTypeKeys.END_PORTAL_FRAME.key() ||
-                key == ItemTypeKeys.FARMLAND.key() ||
-                key == ItemTypeKeys.FROGSPAWN.key() ||
-                key == ItemTypeKeys.JIGSAW.key() ||
-                key == ItemTypeKeys.KNOWLEDGE_BOOK.key() ||
-                key == ItemTypeKeys.LIGHT.key() ||
-                key == ItemTypeKeys.PETRIFIED_OAK_SLAB.key() ||
-                key == ItemTypeKeys.PLAYER_HEAD.key() ||
-                key == ItemTypeKeys.REINFORCED_DEEPSLATE.key() ||
-                key == ItemTypeKeys.SPAWNER.key() ||
-                key == ItemTypeKeys.STRUCTURE_BLOCK.key() ||
-                key == ItemTypeKeys.STRUCTURE_VOID.key() ||
-                key == ItemTypeKeys.TEST_BLOCK.key() ||
-                key == ItemTypeKeys.TEST_INSTANCE_BLOCK.key() ||
-                key == ItemTypeKeys.TRIAL_SPAWNER.key() ||
-                key == ItemTypeKeys.VAULT.key();
+                key.compareTo(ItemTypeKeys.AIR.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.BARRIER.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.BEDROCK.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.BUDDING_AMETHYST.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.CHORUS_PLANT.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.DEBUG_STICK.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.DIRT_PATH.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.END_PORTAL_FRAME.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.FARMLAND.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.FROGSPAWN.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.JIGSAW.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.KNOWLEDGE_BOOK.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.LIGHT.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.PETRIFIED_OAK_SLAB.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.PLAYER_HEAD.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.REINFORCED_DEEPSLATE.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.SPAWNER.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.STRUCTURE_BLOCK.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.STRUCTURE_VOID.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.TEST_BLOCK.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.TEST_INSTANCE_BLOCK.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.TRIAL_SPAWNER.key()) == 0 ||
+                key.compareTo(ItemTypeKeys.VAULT.key()) == 0;
     }
 }

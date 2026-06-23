@@ -158,6 +158,7 @@ public class ItemOfTheDayPlugin extends JavaPlugin {
             player.sendRichMessage("<aqua><bold>Congrats!</bold></aqua> You exchanged the <light_purple>Item " +
                     "of the Day</light_purple> (<gold>" + iotd.getKey().getKey() + "</gold>) for <green>" +
                     reward.getAmount() + "x " + reward.getType().getKey().getKey() + "</green>!");
+            getLogger().info(player.getName() + " has exchanged the Item of the Day for a reward.");
             return Command.SINGLE_SUCCESS;
         }));
 
@@ -224,6 +225,14 @@ public class ItemOfTheDayPlugin extends JavaPlugin {
                                             itemStack.getType().getKey().getKey() + "</green>.");
                                     return Command.SINGLE_SUCCESS;
                                 }))));
+
+        root.then(Commands.literal("reset-claimed").requires(ctx -> ctx.getSender().isOp())
+                .executes(ctx -> {
+                    getConfig().set("claimed", new ArrayList<String>());
+                    ctx.getSource().getSender().sendRichMessage("<green>Reset list of players who've claimed the " +
+                            "<light_purple>Item of the Day</light_purple>.");
+                    return Command.SINGLE_SUCCESS;
+        }));
 
         LiteralCommandNode<CommandSourceStack> builtRoot = root.build();
         getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS,
